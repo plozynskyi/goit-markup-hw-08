@@ -2,26 +2,70 @@
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+  // @include mobile {
+  //   text-align: center;
+  // }
+  // @include tablet {
+  //   text-align: center;
+  // }
+  // @include desktop {
+  //   text-align: center;
+  // }
 }
 
 .hero__title {
-  width: 694px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
+  display: block;
+  max-width: 320px;
+
+  margin: 0 auto 30px auto;
   color: var(--white-text-color);
-  @include font(900, 44, 1.36, 0.06);
   text-transform: uppercase;
+
+  @include mobile {
+    min-width: 360px;
+    @include font(900, 26, 1.62, 0.06);
+  }
+  @include tablet {
+    width: 360px;
+    @include font(900, 26, 1.62, 0.06);
+  }
+  @include desktop {
+    width: 696px;
+    @include font(900, 44, 1.36, 0.06);
+  }
+}
+.hero__button {
+  margin: 0 auto;
 }
 
 .hero-bg-img {
-  max-width: 1600px;
-  max-height: 600px;
-  margin: 0 auto;
-  background-image: linear-gradient(rgba(0, 91, 187, 0.7), rgba(255, 213, 0, 0.7)),
-    url(../images/studio/hero/background_hero.jpg);
+  min-height: 600px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--hero-color-bg);
+  background-image: linear-gradient(rgba(0, 91, 187, 0.7), rgba(255, 213, 0, 0.7)),
+    url(/images/studio/hero/hero-mobile.jpg);
+  @include retina {
+    background-image: linear-gradient(rgba(0, 91, 187, 0.7), rgba(255, 213, 0, 0.7)),
+      url(/images/studio/hero/hero-mobile-2x.jpg);
+  }
+
+  @include tablet {
+    background-image: linear-gradient(rgba(0, 91, 187, 0.7), rgba(255, 213, 0, 0.7)),
+      url(/images/studio/hero/hero-tab.jpg);
+    @include retina {
+      background-image: linear-gradient(rgba(0, 91, 187, 0.7), rgba(255, 213, 0, 0.7)),
+        url(/images/studio/hero/hero-tab-2x.jpg);
+    }
+  }
+  @include desktop {
+    // max-width: 1600px;
+    background-image: linear-gradient(rgba(0, 91, 187, 0.7), rgba(255, 213, 0, 0.7)),
+      url(/images/studio/hero/hero-desktop.jpg);
+    @include retina {
+      background-image: linear-gradient(rgba(0, 91, 187, 0.7), rgba(255, 213, 0, 0.7)),
+        url(/images/studio/hero/hero-desktop-2x.jpg);
+    }
+  }
 }

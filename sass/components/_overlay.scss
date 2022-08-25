@@ -1,0 +1,24 @@
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.overlay__hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translatey(101%);
+  transition: var(--transition-transform);
+  color: var(--white-text-color);
+  @include font(null, 18, 1.56, 0.03);
+  .cards__link:hover &,
+  .cards__link:focus & {
+    transform: translatey(0);
+  }
+}

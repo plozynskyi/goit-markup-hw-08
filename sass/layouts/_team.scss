@@ -1,0 +1,40 @@
+.team {
+  background-color: var(--team-bg-color);
+}
+
+.team__title--bottem {
+  margin-bottom: 50px;
+}
+
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-size);
+}
+
+.team__item {
+  flex-basis: calc((100% - var(--gap-size) * 3) / 4);
+  background-color: var(--page-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
+}
+
+.team__thumb {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team__employee {
+  margin-bottom: 10px;
+  text-align: center;
+  @include font(500, 16, 1.19, 0.03);
+}
+
+.team__text {
+  margin-bottom: 16px;
+  text-align: center;
+  color: var(--secondery-text-color);
+  @include font(null, 16, 1.19, 0.03);
+}

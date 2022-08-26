@@ -1,8 +1,14 @@
-/* --------------------------Главная область-------------------------- */
-
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-no-padding {

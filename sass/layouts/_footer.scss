@@ -6,17 +6,54 @@
 
 .footer__container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  text-align: center;
+  gap: 60px;
+  @include mobile {
+    align-items: center;
+  }
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-direction: row;
+    // gap: 0;
+  }
+  @include desktop {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.footer__adress {
+  @include mobile {
+    min-width: 231px;
+  }
+  @include tablet {
+  }
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .address__text {
   display: block;
-  margin-bottom: 9px;
-  width: 231px;
+  margin-bottom: 8px;
+  // width: 231px;
   color: var(--white-text-color);
-  @include font(null, 14, 1.71, 0.03);
+  @include font(null, 14, 1.17, 0.03);
   font-style: normal;
   transition: var(--transition-color);
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    margin-bottom: 9px;
+  }
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -24,12 +61,19 @@
 }
 
 .contact__list:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    margin-bottom: 9px;
+  }
 }
 
 .contact__item {
   color: var(--contact-color);
-  @include font(null, 14, 1.71, 0.03);
+  @include font(null, 14, 1.17, 0.03);
   font-style: normal;
   transition: var(--transition-color);
   &:hover,
@@ -39,23 +83,54 @@
 }
 
 .footer__thumb {
-  margin-left: auto;
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    margin-left: auto;
+  }
 }
 
 .footer__pre-title_bottom {
   margin-bottom: 20px;
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .singup__area {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  @include mobile {
+    margin-left: auto;
+    align-items: center;
+    margin: auto;
+  }
+  @include tablet {
+    gap: 20px;
+  }
+  @include desktop {
+  }
 }
 
 .singup__email {
+  min-width: 100%;
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    min-width: 358px;
+  }
   display: flex;
   align-items: center;
-  width: 358px;
+
   height: 50px;
   padding: 15px 16px;
   outline: transparent;

@@ -1,4 +1,5 @@
 .logo {
+  padding: 16px 0;
   color: var(--logo-color-text);
   font-family: var(--secondery-font);
   @include font(700, 26, 1.19, 0.03);
@@ -27,4 +28,11 @@
 
   margin-bottom: 20px;
   color: var(--white-text-color);
+  @include font(700, 24, 1.17, 0.03);
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+  }
 }

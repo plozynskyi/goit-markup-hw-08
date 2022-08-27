@@ -1,6 +1,8 @@
 .section {
   align-items: center;
   max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 60px;
   padding-bottom: 60px;
   @include mobile {

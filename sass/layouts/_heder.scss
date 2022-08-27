@@ -10,9 +10,19 @@
 }
 
 .navigation__list {
-  display: flex;
-  margin-left: 93px;
-  gap: 50px;
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: flex;
+    margin-left: 87px;
+    gap: 50px;
+  }
+  @include desktop {
+    display: flex;
+    margin-left: 93px;
+    gap: 50px;
+  }
 }
 
 .navigation__link {
@@ -55,9 +65,22 @@
 }
 
 .connect {
-  display: flex;
-  align-items: center;
-  gap: var(--gap-size);
+  display: none;
+  @include mobile {
+  }
+  @include tablet {
+    display: block;
+
+    align-items: center;
+  }
+  @include desktop {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-size);
+  }
+}
+
+.connect__item {
 }
 
 .heder__connect {
@@ -67,7 +90,7 @@
 .connect__link {
   display: flex;
   align-items: center;
-  padding: 32px 0;
+  padding: 5px 0;
   color: var(--secondery-text-color);
   @include font(500, 14, 1.14, 0.02);
   transition: var(--transition-color);

@@ -32,17 +32,12 @@
 
   flex-basis: 100%;
   @include mobile {
-    // text-align: center;
   }
   @include tablet {
     flex-basis: calc((100% - var(--gap-size)) / 2);
-    // margin-top: auto;
-    // margin-bottom: auto;
   }
   @include desktop {
     flex-basis: calc((100% - var(--gap-size) * 3) / 4);
-    // margin-top: auto;
-    // margin-bottom: auto;
   }
 }
 

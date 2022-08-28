@@ -10,6 +10,7 @@
 }
 
 .navigation__list {
+  display: none;
   @include mobile {
     display: none;
   }
@@ -67,6 +68,7 @@
 .connect {
   display: none;
   @include mobile {
+    display: none;
   }
   @include tablet {
     display: block;
@@ -92,11 +94,20 @@
   align-items: center;
   padding: 5px 0;
   color: var(--secondery-text-color);
-  @include font(500, 14, 1.14, 0.02);
   transition: var(--transition-color);
+
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+
+  @include mobile {
+  }
+  @include tablet {
+    @include font(500, 12, 1.17, 0.02);
+  }
+  @include desktop {
+    @include font(500, 14, 1.14, 0.02);
   }
 }
 

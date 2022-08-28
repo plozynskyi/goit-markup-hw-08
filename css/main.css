@@ -557,6 +557,9 @@ img {
   align-items: center;
 }
 
+.navigation__list {
+  display: none;
+}
 @media screen and (min-width: 480px) {
   .navigation__list {
     display: none;
@@ -620,6 +623,11 @@ img {
 .connect {
   display: none;
 }
+@media screen and (min-width: 480px) {
+  .connect {
+    display: none;
+  }
+}
 @media screen and (min-width: 768px) {
   .connect {
     display: block;
@@ -643,14 +651,26 @@ img {
   align-items: center;
   padding: 5px 0;
   color: var(--secondery-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   transition: var(--transition-color);
 }
 .connect__link:hover, .connect__link:focus {
   color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .connect__link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
 }
 
 .connect__icon {

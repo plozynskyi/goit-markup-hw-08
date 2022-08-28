@@ -3,14 +3,33 @@
 }
 
 .cards__list {
-  display: flex;
-  flex-wrap: wrap;
   gap: var(--gap-size);
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  @include tablet {
+    display: flex;
+
+    flex-wrap: wrap;
+  }
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .cards__item {
-  flex-basis: calc((100% - var(--gap-size) * 2) / 3);
   background-color: var(--page-bg-color);
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    flex-basis: calc((100% - var(--gap-size) * 2) / 3);
+  }
 }
 
 .cards__link {

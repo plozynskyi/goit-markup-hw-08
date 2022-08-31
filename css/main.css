@@ -482,7 +482,14 @@ img {
 
 .filter {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .filter--bottom {
@@ -684,12 +691,22 @@ img {
 }
 
 .menu-open {
+  display: flex;
   margin-left: auto;
+  border: none;
+  background-color: transparent;
+  align-items: center;
+}
+
+.menu-icon--open {
+  align-items: center;
 }
 
 .mob-menu {
   position: fixed;
-  width: 100vw;
+  opacity: 0;
+  z-index: 2;
+  width: 100%;
   height: 100vh;
   background-color: #ffffff;
   top: 0;
@@ -1307,15 +1324,10 @@ img {
 }
 
 .cards__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   gap: var(--gap-size);
-}
-@media screen and (min-width: 480px) {
-  .cards__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-  }
 }
 @media screen and (min-width: 768px) {
   .cards__list {
@@ -1332,6 +1344,7 @@ img {
 
 .cards__item {
   background-color: var(--page-bg-color);
+  flex-basis: 100%;
 }
 @media screen and (min-width: 1200px) {
   .cards__item {
@@ -1344,6 +1357,12 @@ img {
   color: var(--primary-text-color);
   cursor: pointer;
   transition: var(--transition-box-shadow);
+  min-width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .cards__link {
+    flex-basis: calc((100% - var(--gap-size) * 2) / 3);
+  }
 }
 .cards__link:hover, .cards__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);

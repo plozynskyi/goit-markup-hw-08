@@ -1,6 +1,17 @@
 .filter {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+
+  @include mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .filter--bottom {

@@ -13,16 +13,11 @@
 
 .navigation__list {
   display: none;
-
-  @include mobile {
-  }
-
   @include tablet {
     display: flex;
     margin-left: 87px;
     gap: 50px;
   }
-
   @include desktop {
     display: flex;
     margin-left: 93px;
@@ -75,17 +70,10 @@
 
 .connect {
   display: none;
-
-  @include mobile {
-    display: none;
-  }
-
   @include tablet {
     display: block;
-
     align-items: center;
   }
-
   @include desktop {
     display: flex;
     align-items: center;
@@ -103,19 +91,13 @@
   padding: 5px 0;
   color: var(--secondery-text-color);
   transition: var(--transition-color);
-
   &:hover,
   &:focus {
     color: var(--accent-color);
   }
-
-  @include mobile {
-  }
-
   @include tablet {
     @include font(500, 12, 1.17, 0.02);
   }
-
   @include desktop {
     @include font(500, 14, 1.14, 0.02);
   }
@@ -126,7 +108,6 @@
   fill: var(--secondery-text-color);
   margin-right: 10px;
   transition: var(--transition-fill);
-
   .connect__link:hover &,
   .connect__link:focus & {
     fill: var(--accent-color);
@@ -140,19 +121,13 @@
   border: none;
   background-color: transparent;
   align-items: center;
-
   &:hover,
   &:focus {
     fill: var(--accent-color);
   }
-
-  @include mobile {
-  }
-
   @include tablet {
     display: none;
   }
-
   @include desktop {
     display: none;
   }
@@ -166,7 +141,6 @@
   position: fixed;
   z-index: 1;
   background-color: #ffffff;
-
   &.is-open {
     opacity: 0;
     pointer-events: none;
@@ -188,7 +162,7 @@
   justify-content: space-between;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 99;
   width: 100vw;
   height: 100vh;
   padding: 48px;
@@ -210,19 +184,13 @@
   margin-left: auto;
   border: none;
   background-color: transparent;
-
   &:hover,
   &:focus {
     fill: var(--accent-color);
   }
-
-  @include mobile {
-  }
-
   @include tablet {
     display: none;
   }
-
   @include desktop {
     display: none;
   }
@@ -246,7 +214,6 @@
   color: var(--primary-text-color);
   @include font(500, 40, 1.18, 0.02);
   transition: var(--transition-color);
-
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -286,11 +253,9 @@
   @include tablet {
     display: none;
   }
-
   @include desktop {
     display: none;
   }
-
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -313,7 +278,6 @@
   @include font(500, 11, 1.22, 0.02);
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   transition: var(--transition-color);
-
   @include mobile {
     color: var(--accent-color);
     @include font(500, 18, 1.22, 0.02);
@@ -321,7 +285,6 @@
   @include tablet {
     display: none;
   }
-
   @include desktop {
     display: none;
   }

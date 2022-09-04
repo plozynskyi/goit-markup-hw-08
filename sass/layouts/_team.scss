@@ -6,10 +6,6 @@
   text-align: center;
   @include font(700, 28, 1.18, 0.03);
   margin-bottom: 30px;
-  @include mobile {
-  }
-  @include tablet {
-  }
   @include desktop {
     @include font(700, 36, 1.17, 0.03);
     margin-bottom: 50px;
@@ -29,10 +25,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   overflow: hidden;
-
   flex-basis: 100%;
-  @include mobile {
-  }
   @include tablet {
     flex-basis: calc((100% - var(--gap-size)) / 2);
   }

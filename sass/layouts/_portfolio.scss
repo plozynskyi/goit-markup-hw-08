@@ -53,31 +53,19 @@
 .cards__info {
   max-width: 100%;
   min-height: 100%;
+  padding: 20px 24px;
+  border-width: 0 1px 1px;
+  border-style: solid;
+  border-color: var(--border-color-white);
+  border-top: 0;
+  max-width: 100%;
   @include mobile {
-    padding: 20px 24px;
-    border-width: 0 1px 1px;
-    border-style: solid;
-    border-color: var(--border-color-white);
-    border-top: 0;
-    max-width: 100%;
     min-height: 100%;
   }
   @include tablet {
-    padding: 20px 24px;
-    border-width: 0 1px 1px;
-    border-style: solid;
-    border-color: var(--border-color-white);
-    border-top: 0;
-    max-width: 100%;
     min-height: 146px;
   }
   @include desktop {
-    padding: 20px 24px;
-    border-width: 0 1px 1px;
-    border-style: solid;
-    border-color: var(--border-color-white);
-    border-top: 0;
-    max-width: 100%;
     min-height: 100%;
   }
 }

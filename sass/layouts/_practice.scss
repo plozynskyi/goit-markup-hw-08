@@ -1,13 +1,10 @@
 .practice {
   display: none;
-  @include mobile {
-  }
-  @include tablet {
-  }
   @include desktop {
     display: inherit;
   }
 }
+
 .practice__title--bottom {
   margin-bottom: 50px;
 }

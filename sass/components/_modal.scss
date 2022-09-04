@@ -76,7 +76,6 @@
   padding: 12px 12px 12px 42px;
   @include font(null, 14, 1.14, 0.01);
   color: var(--modal-input-color-);
-
   transition: var(--transition-border-color);
   &:hover,
   &:focus {
@@ -179,6 +178,7 @@
   @include desktop {
     @include font(null, 14, 1.71, 0.03);
   }
+
   .check__icon {
     display: inline-block;
     fill: transparent;

@@ -18,17 +18,13 @@
 .hero__title {
   display: inline-block;
   text-align: center;
-
   max-width: 320px;
   margin-bottom: 30px;
-
   color: var(--white-text-color);
   text-transform: uppercase;
   @include font(900, 20, 1.62, 0.06);
-
   @include mobile {
     min-width: 360px;
-
     @include font(900, 26, 1.62, 0.06);
   }
   @include tablet {
@@ -40,6 +36,7 @@
     @include font(900, 44, 1.36, 0.06);
   }
 }
+
 .hero__button {
   margin: 0 auto;
 }
@@ -59,7 +56,6 @@
     background-image: linear-gradient(rgba(0, 91, 187, 0.7), rgba(255, 213, 0, 0.7)),
       url(../images/studio/hero/hero-mobile-2x.jpg);
   }
-
   @include tablet {
     max-width: 768px;
     background-image: linear-gradient(rgba(0, 91, 187, 0.7), rgba(255, 213, 0, 0.7)),

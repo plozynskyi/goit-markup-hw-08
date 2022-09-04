@@ -1,10 +1,6 @@
 .clients__title--bottom {
   margin-bottom: 30px;
   @include font(700, 28, 1.18, 0.03);
-  @include mobile {
-  }
-  @include tablet {
-  }
   @include desktop {
     margin-bottom: 50px;
     @include font(700, 36, 1.17, 0.03);
@@ -20,8 +16,6 @@
 
 .company__item {
   flex-basis: calc((100% - var(--gap-size)) / 2);
-  @include mobile {
-  }
   @include tablet {
     flex-basis: calc((100% - var(--gap-size) * 2) / 3);
   }
@@ -29,6 +23,7 @@
     flex-basis: calc((100% - var(--gap-size) * 5) / 6);
   }
 }
+
 .company__link {
   display: flex;
   justify-content: center;

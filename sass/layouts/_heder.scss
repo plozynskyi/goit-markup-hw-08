@@ -6,20 +6,23 @@
 }
 
 .navigation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .navigation__list {
   display: none;
+
   @include mobile {
   }
+
   @include tablet {
     display: flex;
     margin-left: 87px;
     gap: 50px;
   }
+
   @include desktop {
     display: flex;
     margin-left: 93px;
@@ -33,10 +36,12 @@
   color: var(--primary-text-color);
   @include font(500, 14, 1.14, 0.02);
   transition: var(--transition-color);
+
   &:hover,
   &:focus {
     color: var(--accent-color);
   }
+
   &.curent::after {
     position: absolute;
     content: '';
@@ -46,6 +51,7 @@
     transform: scale(1);
     border-radius: 2px;
   }
+
   &::after {
     position: absolute;
     content: '';
@@ -59,6 +65,7 @@
     transform: scale(0);
     transition: var(--transition-opacity), var(--transition-transform);
   }
+
   &:hover::after,
   &:focus::after {
     opacity: 1;
@@ -68,14 +75,17 @@
 
 .connect {
   display: none;
+
   @include mobile {
     display: none;
   }
+
   @include tablet {
     display: block;
 
     align-items: center;
   }
+
   @include desktop {
     display: flex;
     align-items: center;
@@ -101,9 +111,11 @@
 
   @include mobile {
   }
+
   @include tablet {
     @include font(500, 12, 1.17, 0.02);
   }
+
   @include desktop {
     @include font(500, 14, 1.14, 0.02);
   }
@@ -114,6 +126,7 @@
   fill: var(--secondery-text-color);
   margin-right: 10px;
   transition: var(--transition-fill);
+
   .connect__link:hover &,
   .connect__link:focus & {
     fill: var(--accent-color);
@@ -122,21 +135,21 @@
 
 .menu-open {
   display: flex;
-  // width: 26px;
-  // height: 14px;
-
   padding: 0;
   margin-left: auto;
   border: none;
   background-color: transparent;
   align-items: center;
+
   @include mobile {
   }
+
   @include tablet {
-  display: none  
+    display: none;
   }
+
   @include desktop {
-  display: none;  
+    display: none;
   }
 }
 
@@ -153,12 +166,14 @@
   z-index: 1;
 
   background-color: #ffffff;
+
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
     transform: scale(1);
     transition: var(--transition-transform), var(--transition-opacity);
-      .container {
+
+    .container {
       display: flex;
 
       padding-top: 15px;
@@ -167,21 +182,23 @@
       height: 100vh;
       justify-content: space-between;
       overflow: auto;
+    }
   }
-}
-@include mobile {
-}
-@include tablet {
-display: none  
-}
-@include desktop {
-display: none;  
-}
 
+  @include mobile {
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .menu-close {
-display: flex;
+  display: flex;
   padding: 0;
 
   margin-left: auto;
@@ -190,33 +207,25 @@ display: flex;
 
   @include mobile {
   }
+
   @include tablet {
-  display: none  
+    display: none;
   }
+
   @include desktop {
-  display: none;  
+    display: none;
   }
 }
 
 .content-menu {
   display: flex;
   flex-direction: column;
-
-}
-
-.navigation-menu {
-
-
-}
-
-
-
-.navigation-menu__list {
-
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .navigation-menu__item {
-    + .navigation-menu__item {
+  + .navigation-menu__item {
     margin-top: 32px;
   }
 }
@@ -226,27 +235,74 @@ display: flex;
   color: var(--primary-text-color);
   @include font(500, 40, 1.18, 0.02);
   transition: var(--transition-color);
+
   &:hover,
   &:focus {
     color: var(--accent-color);
   }
 }
 
-.menu-navigation-menu__link {
-}
-
-.connect-menu {
-
-}
-.heder__connect {
-}
 .connect-menu__item {
-}
-.connect-menu__link {
-}
-.connect-menu__icon {
+  + .connect-menu__item {
+    margin-top: 32px;
+  }
 }
 
+.connect-menu__link {
+  display: block;
+  color: var(--primary-text-color);
+  transition: var(--transition-color);
+  @include font(500, 25, 1.18, 0.02);
+  &--blue {
+    color: var(--accent-color);
+  }
+  @include mobile {
+    @include font(500, 34, 1.18, 0.02);
+  }
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.social-menu {
+}
+.social-menu__item {
+  color: var(--accent-color);
+}
+
+.social-menu__list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.social-menu__link {
+  color: var(--accent-color);
+  padding-right: 10px;
+  @include font(500, 11, 1.22, 0.02);
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+  @include mobile {
+    color: var(--accent-color);
+    @include font(500, 18, 1.22, 0.02);
+  }
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
 
 .navigation__item {
   position: relative;

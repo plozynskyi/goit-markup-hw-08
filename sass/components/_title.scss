@@ -8,12 +8,9 @@
 .pre-title {
   @include font(700, 14, 1.14, 0.03);
   text-transform: uppercase;
-}
-
-.pre-title--color-black {
+  &--color-black {
   color: var(--primary-text-color);
-}
-
-.pre-title--color-white {
-  color: var(--white-text-color);
+  }
+  &--color-white {
+  color: var(--white-text-color);}
 }

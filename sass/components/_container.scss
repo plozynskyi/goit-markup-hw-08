@@ -4,13 +4,6 @@
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  &-menu {
-    width: 100vw;
-    height: 100vh;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 40px;
-  }
 
   @include mobile {
     max-width: 480px;

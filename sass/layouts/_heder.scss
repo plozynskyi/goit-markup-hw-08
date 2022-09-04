@@ -141,6 +141,11 @@
   background-color: transparent;
   align-items: center;
 
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
   @include mobile {
   }
 
@@ -159,53 +164,57 @@
 
 .mob-menu {
   position: fixed;
-  top: 0;
-  left: 0;
-      width: 100vw;
-      height: 100vh;
   z-index: 1;
-        justify-content: space-between;
-
   background-color: #ffffff;
 
-  &.is-hidden {
+  &.is-open {
     opacity: 0;
     pointer-events: none;
-    transform: scale(1);
+    transform: translateX(100%);
     transition: var(--transition-transform), var(--transition-opacity);
-
-    .container {
-      display: flex;
-      padding-top: 48px;
-      padding-bottom: 48px;
-      width: 100vw;
-      height: 100vh;
-      justify-content: space-between;
-      overflow: auto;
-    }
   }
-
-  @include mobile {
-          width: 100vw;
-      height: 100vh;
-  }
-
   @include tablet {
     display: none;
   }
+  @include desktop {
+    display: none;
+  }
+}
 
+.menu-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px;
+  transition: var(--transition-transform), var(--transition-opacity);
+  @include tablet {
+    display: none;
+  }
   @include desktop {
     display: none;
   }
 }
 
 .menu-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
   display: flex;
   padding: 0;
-
   margin-left: auto;
   border: none;
   background-color: transparent;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 
   @include mobile {
   }
@@ -255,6 +264,11 @@
 .connect-menu__item {
   + .connect-menu__item {
     margin-top: 32px;
+    transition: var(--transition-color);
+  }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
   }
 }
 
@@ -283,8 +297,6 @@
   }
 }
 
-.social-menu {
-}
 .social-menu__item {
   color: var(--accent-color);
 }
@@ -300,6 +312,7 @@
   padding-right: 10px;
   @include font(500, 11, 1.22, 0.02);
   border-right: 1px solid rgba(33, 33, 33, 0.2);
+  transition: var(--transition-color);
 
   @include mobile {
     color: var(--accent-color);
@@ -311,6 +324,10 @@
 
   @include desktop {
     display: none;
+  }
+  &:hover,
+  &:focus {
+    color: var(--primary-text-color);
   }
 }
 

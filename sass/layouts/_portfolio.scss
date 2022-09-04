@@ -6,13 +6,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap-size);
-  @include mobile {
-    justify-content: center;
-  }
-  @include tablet {
-  }
-  @include desktop {
-  }
 }
 
 .cards__item {

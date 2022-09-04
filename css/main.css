@@ -1575,11 +1575,7 @@ img {
   flex-wrap: wrap;
   gap: var(--gap-size);
 }
-@media screen and (min-width: 480px) {
-  .cards__list {
-    justify-content: center;
-  }
-}
+
 .cards__item {
   background-color: var(--page-bg-color);
   flex-basis: 100%;

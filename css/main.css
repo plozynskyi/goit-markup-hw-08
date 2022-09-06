@@ -1541,7 +1541,6 @@ img {
   justify-content: center;
   margin-bottom: 60px;
   gap: 60px;
-  margin: 0;
 }
 @media screen and (min-width: 480px) {
   .footer__tablet {

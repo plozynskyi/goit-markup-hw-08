@@ -5,28 +5,48 @@
 }
 
 .footer__container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 60px;
   @include mobile {
-    align-items: center;
-  }
-  @include tablet {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: baseline;
-    flex-direction: row;
   }
   @include desktop {
-    align-items: baseline;
+    display: flex;
+    align-items: flex-start;
+    margin-left: auto;
+  }
+}
+
+.footer__tablet {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 60px;
+  gap: 60px;
+  margin: 0;
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  @include tablet {
+    display: flex;
     flex-direction: row;
-    gap: 0;
+    align-items: flex-start;
+    margin-bottom: 60px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    text-align: center;
+    align-items: baseline;
+    margin-bottom: 0;
   }
 }
 
 .footer__adress {
   @include mobile {
+    align-items: center;
     min-width: 231px;
   }
   @include tablet {
@@ -37,6 +57,7 @@
 }
 
 .address__text {
+  align-items: center;
   display: block;
   margin-bottom: 8px;
   color: var(--white-text-color);
@@ -71,13 +92,34 @@
 }
 
 .footer__thumb {
+  @include mobile {
+  }
+  @include tablet {
+    max-width: 450px;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
   @include desktop {
+    max-width: 100%;
+    margin-right: 0;
     margin-left: auto;
   }
 }
 
+.footer__thumb--margin-no {
+  margin: 0;
+}
+
 .footer__pre-title_bottom {
   margin-bottom: 20px;
+  text-align: center;
+  @include mobile {
+    text-align: center;
+  }
+  @include tablet {
+    text-align: center;
+  }
   @include desktop {
     text-align: left;
   }
@@ -87,6 +129,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+
   @include mobile {
     margin-left: auto;
     align-items: center;
@@ -104,6 +147,7 @@
   height: 50px;
   padding: 15px 16px;
   outline: transparent;
+
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   @include font(null, 16, 1.25, 0.03);

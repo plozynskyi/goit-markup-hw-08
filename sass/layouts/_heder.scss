@@ -128,11 +128,36 @@
 .connect__icon {
   display: inline-block;
   fill: var(--secondery-text-color);
-  margin-right: 10px;
   transition: var(--transition-fill);
   .connect__link:hover &,
   .connect__link:focus & {
     fill: var(--accent-color);
+  }
+}
+
+.connect__icon--mail {
+  @include tablet {
+    margin-right: 8px;
+    width: 14px;
+    height: 10px;
+  }
+  @include desktop {
+    margin-right: 10px;
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.connect__icon--phone {
+  @include tablet {
+    margin-right: 8px;
+    width: 10px;
+    height: 14px;
+  }
+  @include desktop {
+    margin-right: 10px;
+    width: 10px;
+    height: 16px;
   }
 }
 

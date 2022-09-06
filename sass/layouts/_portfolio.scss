@@ -4,6 +4,7 @@
 
 .cards__list {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: var(--gap-size);
 }
@@ -37,10 +38,12 @@
 }
 
 .cards__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   color: var(--primary-text-color);
   cursor: pointer;
   transition: var(--transition-box-shadow);
+  height: 100%;
 
   &:hover,
   &:focus {
@@ -51,23 +54,12 @@
 }
 
 .cards__info {
-  max-width: 100%;
-  min-height: 100%;
+  flex-grow: 1;
   padding: 20px 24px;
   border-width: 0 1px 1px;
   border-style: solid;
   border-color: var(--border-color-white);
   border-top: 0;
-  max-width: 100%;
-  @include mobile {
-    min-height: 100%;
-  }
-  @include tablet {
-    min-height: 146px;
-  }
-  @include desktop {
-    min-height: 100%;
-  }
 }
 
 .cards__title {

@@ -3,6 +3,17 @@
   font-family: var(--secondery-font);
   @include font(700, 26, 1.19, 0.03);
   transition: var(--transition-color);
+  @include mobile {
+    padding: 0;
+  }
+  @include tablet {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  @include desktop {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
   &:hover,
   &:focus {
     color: var(--logo-accent-color);

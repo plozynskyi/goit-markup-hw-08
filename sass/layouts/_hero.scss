@@ -1,17 +1,17 @@
 .hero {
   text-align: center;
-  padding: 118px 30px;
+  padding: 118px 0;
   @include mobile {
     text-align: center;
-    padding: 118px 60px;
+    padding: 118px 0;
   }
   @include tablet {
     text-align: center;
-    padding: 118px 204px;
+    padding: 118px 0;
   }
   @include desktop {
     text-align: center;
-    padding: 200px 252px;
+    padding: 200px 0;
   }
 }
 
